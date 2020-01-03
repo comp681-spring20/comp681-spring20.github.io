@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>comp681-spring20 Tools</title>
+  </head>
+  <body>
+    <section>
+      <div class="header">
+        <h1>Comp 681</h1>
+        <h2>Formal Methods</h2>
+        <h2>Spring 2020</h2>
+      </div>
+      <div class="links">
+        <table>
+           <tr>
+            <th><a href="index.html">Home</a></th>
+            <th><a href="course-info.html">Course Info</a></th>
+			<th><a href="course-project.html">Course Project</a></th>
+			<th><a href="readings.html">Readings</a></th>
+            <th><a href="tools.html">Tools</a></th>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section>
+      <div class="tools">
+        <h3 class="subheader">Tools</h3>
+		<p> This is a collection of tools that you can explore for your semester project. Homework assignments will also make use of some of these tools. <br><br>The tools fall into the following categories: <b><a href="#sat" style ="color:#439755">Sat Solvers</a></b> | <b><a href="#smt" style ="color:#439755">SMT Solvers</a></b> | <b><a href="#fmf" style ="color:#439755">Finite Model Finding</a></b> |  <b><a href="#verify" style ="color:#439755">Verification</a></b> | <b><a href="#bounded" style ="color:#439755">Bounded Verification</a></b> | <b><a href="#symbolic" style ="color:#439755">Symbolic Execution</a></b> | <b><a href="#mc" style ="color:#439755">Model Checking</a></b> | <b><a href="#synthesis" style ="color:#439755">Synthesis, Declarative Execution and Fault Localization</a></b> | <b><a href="#solver-aided" style ="color:#439755">Solver-Aided Languages</a></b></p>
+        <table>
+          <tr>
+            <th>Tool</th>
+            <th>Notes</th>
+          </tr>
+		  <tr id="sat">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Sat Solvers</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="http://www.labri.fr/perso/lsimon/glucose/" style ="color:#439755">Glucose</a></b></td>
+            <td>Glucose is great at solving hard instances. It is designed to be parallel, since 2014. The name of the Solver name is a contraction of the concept of "glue clauses", a particular kind of clauses that glucose detects and preserves during search. </td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://fmv.jku.at/lingeling/" style ="color:#439755">Lingeling, Plingeling and Treengeling</a></b></td>
+            <td>Lingeling and its parallel versions Plingeling and Treengeling, obtained first places in 4 tracks (out of 11) of the SAT'14 Competition and thus won 4 Gödel medals during the FLoC'14 Olympic Games. Lingeling also won a first place in the Configurable SAT Solver Challenge (CSSC'14).</td>         
+          </tr>
+		  <tr>
+            <td><b><a href="https://github.com/msoos/cryptominisat" style ="color:#439755">CryptoMiniSat</a></b></td>
+            <td>CryptoMiniSat supports XOR constraints. The system has 3 interfaces: command-line, C++ library and python. </td>         
+          </tr>
+		  <tr>
+            <td><b><a href="http://minisat.se/" style ="color:#439755">MiniSat</a></b></td>
+            <td>A <i>classic</i> SAT solver. The solver is known for its ability to maintain a small code base, without general loss of perfance compared to other modern SAT solvers. The first version was just above 600 lines, not counting comments and empty lines. </td>         
+          </tr>
+		  <tr>
+            <td><b><a href="http://www.sat4j.org/" style ="color:#439755">Sat4j</a></b></td>
+            <td>Sat4j is a java library for solving boolean satisfaction and optimization problems. It can solve SAT, MAXSAT, Pseudo-Boolean, and <i>Minimally Unsatisfiable Subset</i> (MUS) problems.</td>    
+          </tr>
+		  
+		  <tr id="smt">
+		  <td colspan="2" bgcolor="#ededed"><b><center>SMT Solvers</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="https://github.com/Z3Prover/z3" style ="color:#439755">Z3</a></b></td>
+            <td>Z3 is a theorem prover from Microsoft Research with support for bitvectors, booleans, arrays, floating point numbers, strings, and other data types. </td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://cvc4.cs.stanford.edu/web/" style ="color:#439755">CVC4</a></b></td>
+            <td>CVC4 is an efficient open-source automatic theorem prover for SMT problems. It can be used to prove the validity (or, dually, the satisfiability) of first-order formulas in a large number of built-in logical theories and their combination. </td>         
+          </tr>
+		  <tr>
+            <td><b><a href="http://yices.csl.sri.com/" style ="color:#439755">Yices </a></b></td>
+            <td>Yices 2 is an SMT solver that decides the satisfiability of formulas containing uninterpreted function symbols with equality, real and integer arithmetic, bitvectors, scalar types, and tuples. Yices 2 supports both linear and nonlinear arithmetic. </td>         
+          </tr>
+		  <tr>
+            <td><b><a href="https://boolector.github.io/" style ="color:#439755">Boolector</a></b></td>
+            <td>A SMT solver for the theories of fixed-size bit-vectors, arrays and uninterpreted functions. Boolector won first place in divisions QF_ABV (main, application track), QF_BV (main track) and QF_UFBV (main, application track) in the SMT competition 2018. </td>         
+          </tr>
+		  
+		  <tr id="fmf">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Finite Model Finding</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="http://emina.github.io/kodkod/" style ="color:#439755">Kodkod</a></b></td>
+            <td>Kodkod is an efficient SAT-based constraint solver for first order logic with relations, transitive closure, bit-vector arithmetic, and partial models. It provides automated reasoning facilities for both satisfiable and unsatisfiable problems.</td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://alloytools.org/" style ="color:#439755">Alloy</a></b></td>
+            <td>Alloy is an open source language for software modeling. Alloy’s tool, the Alloy Analyzer, is a solver that takes the constraints of a model and finds structures that satisfy them. It can be used both to explore the model by generating sample structures, and to check properties of the model by generating counterexamples.</td>         
+          </tr>
+		  <tr>
+            <td><b><a href="https://dtai.cs.kuleuven.be/software/idp//" style ="color:#439755">IDP</a></b></td>
+            <td>IDP is a knowledge Base System (KB-system) for the FO(·) language. FO(·) is an extension of first-order logic (FO) with types, aggregates, inductive definitions, bounded arithmetic, partial functions, etc</td>         
+          </tr>
+		  <tr>
+            <td><b><a href="http://www.swmath.org/software/6905" style ="color:#439755">MACE4</a></b></td>
+            <td>Mace4 is a program that searches for finite models of first-order formulas. For a given domain size, all instances of the formulas over the domain are constructed. If satisfiability is detected, one or more models are printed.  </td>         
+          </tr>
+
+		   <tr id="verify">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Verification</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="https://www.microsoft.com/en-us/research/project/dafny-a-language-and-program-verifier-for-functional-correctness/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fprojects%2Fdafny%2F" style ="color:#439755">Dafny</a></b></td>
+            <td>Dafny is a programming language with built-in specification constructs. The Dafny static program verifier can be used to verify the functional correctness of programs.</td>         
+          </tr>
+			<tr>
+            <td><b><a href="https://www.microsoft.com/en-us/research/project/boogie-an-intermediate-verification-language/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fprojects%2Fboogie%2F" style ="color:#439755">Boogie</a></b></td>
+            <td>Boogie is an intermediate verification language, intended as a layer on which to build program verifiers for other languages. Dafny and VCC use Boogie.</td>         
+          </tr>
+		  <tr>
+            <td><b><a href="https://archive.codeplex.com/?p=vcc" style ="color:#439755">IDP</a></b></td>
+            <td>VCC is a mechanical verifier for concurrent C programs. VCC takes a C program, annotated with function specifications, data invariants, loop invariants, and ghost code, and tries to prove these annotations correct. If it succeeds, VCC promises that your program actually meets its specifications.</td>         
+          </tr>
+		  <tr>
+            <td><b><a href="http://lara.epfl.ch/w/leon" style ="color:#439755">MACE4</a></b></td>
+            <td>Leon is an automated system for verifying, repairing, and synthesizing functional Scala programs. </td>         
+          </tr>
+		  
+		  <tr id="bounded">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Bounded Verification</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="http://www.cprover.org/cbmc/" style ="color:#439755">CBMC </a></b></td>
+            <td>CBMC is a Bounded Model Checker for C and C++ programs. CBMC verifies memory safety, checks for exceptions, checks for various variants of undefined behavior, and user-specified assertions. </td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://groups.csail.mit.edu/sdg/forge/" style ="color:#439755">FORGE</a></b></td>
+            <td>Forge is a program analysis framework that allows a procedure in a conventional object oriented language to be automatically checked against a rich interface specification. </td>         
+          </tr>
+		  <tr>
+            <td><b><a href="http://people.csail.mit.edu/jnear/rubicon/" style ="color:#439755">Rubicon</a></b></td>
+            <td>Rubicon is a library for Ruby, Rails, and RSpec that lets you write formal specifications of the behavior of your web apps. Rubicon gives you the quantifiers of first-order logic, so your specifications cover all possible objects of the given type.</td>         
+          </tr>
+		  
+		   <tr id="symbolic">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Symbolic Execution</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="https://klee.github.io/" style ="color:#439755">KLEE  </a></b></td>
+            <td>KLEE is a symbolic virtual machine built on top of the LLVM compiler infrastructure, and available under the UIUC open source license. </td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://javapathfinder.sourceforge.net/" style ="color:#439755">JPF</a></b></td>
+            <td>Java Pathfinder (JPF) is a system to verify executable Java bytecode programs. JPF was developed at the NASA Ames Research Center and open sourced in 2005.  </td>         
+          </tr>
+
+		   <tr id="mc">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Model Checking</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="http://spinroot.com/spin/whatispin.html" style ="color:#439755">SPIN</a></b></td>
+            <td>SPIN is a general tool for verifying the correctness of concurrent software models in a rigorous and mostly automated fashion.</td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://formalverification.cs.utah.edu/Murphi/" style ="color:#439755">Murphi</a></b></td>
+            <td>Murphiis an enumerative (explicit state) model checker, with its own input language (also called Murphi) which is a guard -> action notation similar to Unity, which are repeatedely executed in an infinite loop. </td>         
+          </tr>
+			</tr>
+			<tr>
+            <td><b><a href="http://nusmv.fbk.eu/" style ="color:#439755">NuSMV</a></b></td>
+            <td>NuSMV is new symbolic model checker. NuSMV is a reimplementation and extension of SMV, the first model checker based on BDDs.  </td>         
+          </tr>
+
+			<tr id="synthesis">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Synthesis, Declarative Execution and Fault Localization</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="https://bitbucket.org/gatoatigrado/sketch-frontend/wiki/Home" style ="color:#439755">Sketch</a></b></td>
+            <td>SKETCH is a software synthesis tool that allows for rapid development of highly tuned bug-free algorithm implementations. To do this, the programmer develops a sketch, or partial implementation, and a separate specification of the desired functionality. The synthesizer then completes the sketch to behave like the specification.</td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://lara.epfl.ch/w/kaplan" style ="color:#439755">KAPLAN</a></b></td>
+            <td>Kaplan is an extension of the Scala programming language that supports constraint-solving. </td>         
+          </tr>
+			</tr>
+			<tr>
+            <td><b><a href="http://people.csail.mit.edu/aleks/squander/" style ="color:#439755">Squander</a></b></td>
+            <td>Squander is a framework that provides a unified environment for writing declarative constraints and imperative statements in the context of a single program. By being able to mix imperative code with executable declarative specifications, the user can easily express constraint problems in-place. </td>         
+          </tr>
+		   </tr>
+			<tr>
+            <td><b><a href="https://www.hesam.us/cs/planb/" style ="color:#439755">PBnJ </a></b></td>
+            <td>Plan B, performs dynamic contract checking of methods. Plan B as well as its instantiation in an extension to Java with executable specifications forms the tool PBnJ. </td>         
+          </tr>
+			</tr>
+			<tr>
+            <td><b><a href="http://bugassist.mpi-sws.org/" style ="color:#439755">Bug-Assist</a></b></td>
+            <td>Bug-Assist takes as input an ANSI-C program annotated with assertions, performs model checking internally to find potential assertion violations, and for each error trace returned by the model checker, returns a small number of lines of code which can be changed to eliminate the error trace.  </td>         
+          </tr>
+		  
+		   <tr id="solver-aided">
+		  <td colspan="2" bgcolor="#ededed"><b><center>Solver-Aided Languages</center></b></td>
+		  </tr>
+          <tr>
+            <td><b><a href="http://emina.github.io/rosette/" style ="color:#439755">Rosette</a></b></td>
+            <td>To verify or synthesize code, Rosette compiles it to logical constraints solved with off-the-shelf SMT solvers. By combining virtualized access to solvers with Racket’s metaprogramming, Rosette makes it easy to develop synthesis and verification tools for new languages.</td>         
+          </tr>
+			<tr>
+            <td><b><a href="http://racket-lang.org/" style ="color:#439755">Racket</a></b></td>
+            <td>Racket is a general-purpose programming language as well as the world’s first ecosystem for language-oriented programming.  </td>         
+          </tr>
+			</tr>
+
+		  
+        </table>
+      </div>
+    </section>
+
+  </body>
+</html>
